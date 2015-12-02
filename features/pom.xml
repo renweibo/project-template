@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.digiwes</groupId>
+        <artifactId>party-manager</artifactId>
+        <version>0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>party-manager-features</artifactId>
+    <packaging>pom</packaging>
+    <name>Digiwes - Party Manager Features</name>
+    <url>http://www.digiwes.com</url>
+
+    <modules>
+        <module>com.digiwes.party.mgt.feature</module>
+        <module>com.digiwes.party.mgt.server.feature</module>
+        <module>com.digiwes.party.mgt.ui.feature</module>
+    </modules>
+
+
+
+
+</project>

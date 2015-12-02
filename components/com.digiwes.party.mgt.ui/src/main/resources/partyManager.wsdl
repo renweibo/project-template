@@ -1,0 +1,199 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://mgt.party.baas.digiwes.com" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ax2362="http://data.mgt.party.baas.digiwes.com/xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://mgt.party.baas.digiwes.com">
+    <wsdl:documentation>PartyManager</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://data.mgt.party.baas.digiwes.com/xsd">
+            <xs:complexType name="Party">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="partyId" nillable="true" type="xs:string" />
+                    <xs:element minOccurs="0" name="age" type="xs:int" />
+                    <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+
+                    <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax2363="http://data.mgt.party.baas.digiwes.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://mgt.party.baas.digiwes.com">
+            <xs:import namespace="http://data.mgt.party.baas.digiwes.com/xsd" />
+            <xs:element name="getPartys">
+                <xs:complexType>
+                    <xs:sequence />
+
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPartysResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ax2363:Party" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="PartyManagerException">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="PartyManagerException" nillable="true" type="ns:Exception" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="Exception">
+                <xs:sequence>
+
+                    <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="deleteParty">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="nicNumber" nillable="true" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+
+            </xs:element>
+            <xs:element name="addParty">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="party" nillable="true" type="ax2363:Party" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+
+    </wsdl:types>
+    <wsdl:message name="deletePartyRequest">
+        <wsdl:part name="parameters" element="ns:deleteParty" />
+    </wsdl:message>
+    <wsdl:message name="PartyManagerException">
+        <wsdl:part name="parameters" element="ns:PartyManagerException" />
+    </wsdl:message>
+    <wsdl:message name="addPartyRequest">
+        <wsdl:part name="parameters" element="ns:addParty" />
+
+    </wsdl:message>
+    <wsdl:message name="getPartysRequest">
+        <wsdl:part name="parameters" element="ns:getPartys" />
+    </wsdl:message>
+    <wsdl:message name="getPartysResponse">
+        <wsdl:part name="parameters" element="ns:getPartysResponse" />
+    </wsdl:message>
+    <wsdl:portType name="PartyManagerPortType">
+        <wsdl:operation name="deleteParty">
+
+            <wsdl:input message="ns:deletePartyRequest" wsaw:Action="urn:deleteParty" />
+            <wsdl:fault message="ns:PartyManagerException" name="PartyManagerException" wsaw:Action="urn:deletePartyPartyManagerException" />
+        </wsdl:operation>
+        <wsdl:operation name="addParty">
+            <wsdl:input message="ns:addPartyRequest" wsaw:Action="urn:addParty" />
+            <wsdl:fault message="ns:PartyManagerException" name="PartyManagerException" wsaw:Action="urn:addPartyPartyManagerException" />
+        </wsdl:operation>
+        <wsdl:operation name="getPartys">
+            <wsdl:input message="ns:getPartysRequest" wsaw:Action="urn:getPartys" />
+
+            <wsdl:output message="ns:getPartysResponse" wsaw:Action="urn:getPartysResponse" />
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="PartyManagerSoap11Binding" type="ns:PartyManagerPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+        <wsdl:operation name="deleteParty">
+            <soap:operation soapAction="urn:deleteParty" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+
+            </wsdl:input>
+            <wsdl:fault name="PartyManagerException">
+                <soap:fault use="literal" name="PartyManagerException" />
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="addParty">
+            <soap:operation soapAction="urn:addParty" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+
+            </wsdl:input>
+            <wsdl:fault name="PartyManagerException">
+                <soap:fault use="literal" name="PartyManagerException" />
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getPartys">
+            <soap:operation soapAction="urn:getPartys" style="document" />
+            <wsdl:input>
+                <soap:body use="literal" />
+
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="PartyManagerSoap12Binding" type="ns:PartyManagerPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+        <wsdl:operation name="deleteParty">
+
+            <soap12:operation soapAction="urn:deleteParty" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:fault name="PartyManagerException">
+                <soap12:fault use="literal" name="PartyManagerException" />
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="addParty">
+
+            <soap12:operation soapAction="urn:addParty" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:fault name="PartyManagerException">
+                <soap12:fault use="literal" name="PartyManagerException" />
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getPartys">
+
+            <soap12:operation soapAction="urn:getPartys" style="document" />
+            <wsdl:input>
+                <soap12:body use="literal" />
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:binding name="PartyManagerHttpBinding" type="ns:PartyManagerPortType">
+        <http:binding verb="POST" />
+        <wsdl:operation name="deleteParty">
+            <http:operation location="deleteParty" />
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters" />
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="addParty">
+
+            <http:operation location="addParty" />
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters" />
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getPartys">
+            <http:operation location="getPartys" />
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters" />
+
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="PartyManager">
+        <wsdl:port name="PartyManagerHttpsSoap11Endpoint" binding="ns:PartyManagerSoap11Binding">
+            <soap:address location="https://10.100.3.49:9443/services/PartyManager.PartyManagerHttpsSoap11Endpoint/" />
+
+        </wsdl:port>
+        <wsdl:port name="PartyManagerHttpsSoap12Endpoint" binding="ns:PartyManagerSoap12Binding">
+            <soap12:address location="https://10.100.3.49:9443/services/PartyManager.PartyManagerHttpsSoap12Endpoint/" />
+        </wsdl:port>
+        <wsdl:port name="PartyManagerHttpsEndpoint" binding="ns:PartyManagerHttpBinding">
+            <http:address location="https://10.100.3.49:9443/services/PartyManager.PartyManagerHttpsEndpoint/" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
