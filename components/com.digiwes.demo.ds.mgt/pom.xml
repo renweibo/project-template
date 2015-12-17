@@ -15,7 +15,7 @@
     <url>http://digiwes.com</url>
 
     <dependencies>
-        <dependency>
+        <!--<dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi</artifactId>
             <version>3.0.0</version>
@@ -29,7 +29,7 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>org.apache.commons.logging</artifactId>
             <version>1.0.4.v200706111724</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 
     <build>

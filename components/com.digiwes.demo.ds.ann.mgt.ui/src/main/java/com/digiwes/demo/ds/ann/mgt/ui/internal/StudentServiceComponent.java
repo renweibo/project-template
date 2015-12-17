@@ -2,9 +2,10 @@ package com.digiwes.demo.ds.ann.mgt.ui.internal;
 
 
 import com.digiwes.demo.ds.ann.mgt.service.IStudentService;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.osgi.service.component.ComponentContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * @scr.component name="demo.student.component" immediate=true
@@ -13,7 +14,7 @@ import org.osgi.service.component.ComponentContext;
  *                policy="dynamic" bind="setStudentService" unbind="unsetStudentService"
  */
 public class StudentServiceComponent {
-    private static Log log = LogFactory.getLog(StudentServiceComponent.class);
+    private static Logger log = LoggerFactory.getLogger(StudentServiceComponent.class);
     private static IStudentService studentService;
 
     protected void activate(ComponentContext ctxt) {
@@ -46,6 +47,6 @@ public class StudentServiceComponent {
      * @param ctxt
      */
     protected void deactivate(ComponentContext ctxt) {
-        log.debug("DEMO Person Management bundle is deactivated");
+       log.debug("DEMO Person Management bundle is deactivated");
     }
 }

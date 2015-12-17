@@ -3,7 +3,7 @@
 <!--定义Servlet组件 -->
 <component name="demo.employee.mgt.ui.dscomponent">
     <!--定义组件的实现类 -->
-    <implementation class="com.digiwes.demo.ds.mgt.ui.internal.EmployeeServiceComponent"/>
+    <implementation class="com.digiwes.demo.ds.mgt.ui.client.EmployeeServiceComponent"/>
     <!--设置引用的QueryService -->
     <reference name="IEmployeeService" interface="com.digiwes.demo.ds.mgt.service.IEmployeeService" bind="setEmployeeService" unbind="unsetEmployeeService" policy="dynamic" cardinality="0..1"/>
 

@@ -1,13 +1,13 @@
-package com.digiwes.demo.ds.mgt.ui.internal;
+package com.digiwes.demo.ds.mgt.ui.client;
 
 import com.digiwes.demo.ds.mgt.service.IEmployeeService;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.osgi.service.component.ComponentContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class EmployeeServiceComponent {
-    private static Log log = LogFactory.getLog(EmployeeServiceComponent.class);
+    private static Logger log = LoggerFactory.getLogger(EmployeeServiceComponent.class);
     private static IEmployeeService employeeService;
 
     protected void activate(ComponentContext ctxt) {
