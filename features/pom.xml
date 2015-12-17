@@ -2,21 +2,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>com.digiwes</groupId>
-        <artifactId>party-manager</artifactId>
+        <artifactId>demo-manager</artifactId>
         <version>0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>party-manager-features</artifactId>
+    <artifactId>demo-manager-features</artifactId>
     <packaging>pom</packaging>
-    <name>Digiwes - Party Manager Features</name>
+    <name>Digiwes - Demo Manager Features</name>
     <url>http://www.digiwes.com</url>
 
     <modules>
-        <module>com.digiwes.party.mgt.feature</module>
-        <module>com.digiwes.party.mgt.server.feature</module>
-        <module>com.digiwes.party.mgt.ui.feature</module>
+        <module>com.digiwes.demo.mgt.feature</module>
+        <module>com.digiwes.demo.mgt.ui.feature</module>
+        <module>com.digiwes.demo.mgt.server.feature</module>
+        <module>com.digiwes.demo.ds.mgt.feature</module>
+        <module>com.digiwes.demo.ds.mgt.server.feature</module>
+        <module>com.digiwes.demo.ds.mgt.ui.feature</module>
+        <module>com.digiwes.demo.ds.ann.mgt.server.feature</module>
+        <module>com.digiwes.demo.ds.ann.mgt.ui.feature</module>
+        <module>com.digiwes.demo.ds.ann.mgt.feature</module>
     </modules>
 
 

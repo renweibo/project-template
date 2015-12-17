@@ -2,23 +2,46 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>com.digiwes</groupId>
-        <artifactId>party-manager</artifactId>
+        <artifactId>demo-manager</artifactId>
         <version>0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.digiwes</groupId>
-    <artifactId>party-manager-components</artifactId>
+    <artifactId>demo-manager-components</artifactId>
     <version>0.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
-    <name>Digiwes - Party Manager Components</name>
-    <description>Party Manager Components</description>
+    <name>Digiwes - Demo Manager Components</name>
+    <description>Demo Manager Components</description>
     <url>http://digiwes.com</url>
 
     <modules>
-        <module>com.digiwes.party.mgt</module>
-        <module>com.digiwes.party.mgt.ui</module>
+        <module>com.digiwes.demo.mgt</module>
+        <module>com.digiwes.demo.mgt.ui</module>
+        <module>com.digiwes.demo.ds.mgt</module>
+        <module>com.digiwes.demo.ds.mgt.ui</module>
+        <module>com.digiwes.demo.ds.ann.mgt</module>
+        <module>com.digiwes.demo.ds.ann.mgt.ui</module>
     </modules>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-scr-plugin</artifactId>
+                    <version>${maven.scr.plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>generate-scr-scrdescriptor</id>
+                            <goals>
+                                <goal>scr</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>

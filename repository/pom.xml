@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>party-manager</artifactId>
+        <artifactId>demo-manager</artifactId>
         <groupId>com.digiwes</groupId>
         <version>0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
@@ -9,9 +9,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>digiwes-baas-party-mgt-repository</artifactId>
+    <artifactId>digiwes-demo-mgt-repository</artifactId>
     <packaging>pom</packaging>
-    <name>Digiwes - Party Manager Feature Repository</name>
+    <name>Digiwes - Demo Manager Feature Repository</name>
     <url>http://digiwes.com</url>
 
     <build>
@@ -34,8 +34,15 @@
                             <publishArtifactRepository>true</publishArtifactRepository>
                             <featureArtifacts>
                                 <featureArtifactDef>
-                                    com.digiwes.baas:com.digiwes.baas.party.mgt.feature:${party.manager.version}
+                                    com.digiwes:com.digiwes.demo.mgt.feature:${party.manager.version}
                                 </featureArtifactDef>
+                                <featureArtifactDef>
+                                    com.digiwes:com.digiwes.demo.ds.mgt.feature:${party.manager.version}
+                                </featureArtifactDef>
+                                <featureArtifactDef>
+                                    com.digiwes:com.digiwes.demo.ds.ann.mgt.feature:${party.manager.version}
+                                </featureArtifactDef>
+
                             </featureArtifacts>
                         </configuration>
                     </execution>

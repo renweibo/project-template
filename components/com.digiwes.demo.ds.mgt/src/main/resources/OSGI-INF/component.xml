@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--定义Servlet组件 -->
+<component name="demo.employee.mgt.dscomponent">
+    <!--定义组件的实现类 -->
+    <implementation class="com.digiwes.demo.ds.mgt.service.impl.EmployeeService"/>
+    <!-- 定义组件实现的接口-->
+    <service>
+        <provide interface="com.digiwes.demo.ds.mgt.service.IEmployeeService"/>
+    </service>
+</component>

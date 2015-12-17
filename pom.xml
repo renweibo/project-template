@@ -8,11 +8,11 @@
     </parent>
 
     <groupId>com.digiwes</groupId>
-    <artifactId>party-manager</artifactId>
+    <artifactId>demo-manager</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Digiwes - Party Manager</name>
-    <description>Party Manager</description>
+    <name>Digiwes - Demo Manager</name>
+    <description>Demo Manager</description>
     <url>http://www.digiwes.com</url>
 
     <properties>
@@ -22,6 +22,8 @@
         <axis2.client.osgi.version>1.6.1.wso2v12</axis2.client.osgi.version>
         <orbit.version.axiom>1.2.11.wso2v6</orbit.version.axiom>
         <orbit.version.wsdl4j>1.6.2.wso2v4</orbit.version.wsdl4j>
+        <wso2carbon.version>4.2.0</wso2carbon.version>
+        <maven.scr.plugin.version>1.7.4</maven.scr.plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -46,25 +48,72 @@
                 <artifactId>wsdl4j</artifactId>
                 <version>${orbit.version.wsdl4j}</version>
             </dependency>
+
             <dependency>
-                <groupId>com.digiwes.baas</groupId>
-                <artifactId>com.digiwes.baas.party.mgt.ui</artifactId>
+                <groupId>com.digiwes</groupId>
+                <artifactId>com.digiwes.demo.mgt.ui</artifactId>
                 <version>${party.manager.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.digiwes.baas</groupId>
-                <artifactId>com.digiwes.baas.party.mgt</artifactId>
+                <groupId>com.digiwes</groupId>
+                <artifactId>com.digiwes.demo.mgt</artifactId>
                 <version>${party.manager.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.digiwes.baas</groupId>
-                <artifactId>com.digiwes.baas.party.mgt.server.feature</artifactId>
+                <groupId>com.digiwes</groupId>
+                <artifactId>com.digiwes.demo.mgt.server.feature</artifactId>
                 <version>${party.manager.version}</version>
                 <type>zip</type>
             </dependency>
             <dependency>
-                <groupId>com.digiwes.baas</groupId>
-                <artifactId>com.digiwes.baas.party.mgt.ui.feature</artifactId>
+                <groupId>com.digiwes</groupId>
+                <artifactId>com.digiwes.demo.mgt.ui.feature</artifactId>
+                <version>${party.manager.version}</version>
+                <type>zip</type>
+            </dependency>
+
+            <dependency>
+                <groupId>com.digiwes</groupId>
+                <artifactId>com.digiwes.demo.ds.mgt.ui</artifactId>
+                <version>${party.manager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.digiwes</groupId>
+                <artifactId>com.digiwes.demo.ds.mgt</artifactId>
+                <version>${party.manager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.digiwes</groupId>
+                <artifactId>com.digiwes.demo.ds.mgt.server.feature</artifactId>
+                <version>${party.manager.version}</version>
+                <type>zip</type>
+            </dependency>
+            <dependency>
+                <groupId>com.digiwes</groupId>
+                <artifactId>com.digiwes.demo.ds.mgt.ui.feature</artifactId>
+                <version>${party.manager.version}</version>
+                <type>zip</type>
+            </dependency>
+
+            <dependency>
+                <groupId>com.digiwes</groupId>
+                <artifactId>com.digiwes.demo.ds.ann.mgt.ui</artifactId>
+                <version>${party.manager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.digiwes</groupId>
+                <artifactId>com.digiwes.demo.ds.ann.mgt</artifactId>
+                <version>${party.manager.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.digiwes</groupId>
+                <artifactId>com.digiwes.demo.ds.ann.mgt.server.feature</artifactId>
+                <version>${party.manager.version}</version>
+                <type>zip</type>
+            </dependency>
+            <dependency>
+                <groupId>com.digiwes</groupId>
+                <artifactId>com.digiwes.demo.ds.ann.mgt.ui.feature</artifactId>
                 <version>${party.manager.version}</version>
                 <type>zip</type>
             </dependency>
@@ -75,7 +124,7 @@
         <module>components</module>
         <module>features</module>
         <module>repository</module>
-        <module>service-stubs</module>
+        <!--<module>service-stubs</module>-->
     </modules>
 
 </project>
