@@ -18,7 +18,7 @@
         <dependency>
             <groupId>com.digiwes</groupId>
             <artifactId>com.digiwes.demo.ds.ann.mgt.ui</artifactId>
-            <version>0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

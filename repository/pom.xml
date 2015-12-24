@@ -34,13 +34,13 @@
                             <publishArtifactRepository>true</publishArtifactRepository>
                             <featureArtifacts>
                                 <featureArtifactDef>
-                                    com.digiwes:com.digiwes.demo.mgt.feature:${party.manager.version}
+                                    com.digiwes:com.digiwes.demo.mgt.feature:${project.version}
                                 </featureArtifactDef>
                                 <featureArtifactDef>
-                                    com.digiwes:com.digiwes.demo.ds.mgt.feature:${party.manager.version}
+                                    com.digiwes:com.digiwes.demo.ds.mgt.feature:${project.version}
                                 </featureArtifactDef>
                                 <featureArtifactDef>
-                                    com.digiwes:com.digiwes.demo.ds.ann.mgt.feature:${party.manager.version}
+                                    com.digiwes:com.digiwes.demo.ds.ann.mgt.feature:${project.version}
                                 </featureArtifactDef>
 
                             </featureArtifacts>

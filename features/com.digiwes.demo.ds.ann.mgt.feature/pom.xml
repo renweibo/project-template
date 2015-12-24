@@ -22,13 +22,13 @@
         <dependency>
             <groupId>com.digiwes</groupId>
             <artifactId>com.digiwes.demo.ds.ann.mgt.server.feature</artifactId>
-            <version>0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.digiwes</groupId>
             <artifactId>com.digiwes.demo.ds.ann.mgt.ui.feature</artifactId>
-            <version>0.1-SNAPSHOT</version>
+            <version>${project.version}</version>
             <type>zip</type>
         </dependency>
     </dependencies>
