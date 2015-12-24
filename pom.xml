@@ -144,7 +144,6 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>testFirstMaven</finalName>
     </build>
     <distributionManagement>
         <repository>
