@@ -3,8 +3,7 @@ package com.digiwes.demo.ds.ann.mgt.ui.client;
 import com.digiwes.demo.ds.ann.mgt.bean.Student;
 import com.digiwes.demo.ds.ann.mgt.service.IStudentService;
 import com.digiwes.demo.ds.ann.mgt.ui.internal.StudentServiceComponent;
-//import org.apache.commons.logging.Log;
-//import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 
 import java.util.List;
 
@@ -12,12 +11,13 @@ import java.util.List;
  * Created by liurl3 on 2015/12/9.
  */
 public class StudentClient {
-    //private static Log log = LogFactory.getLog(StudentClient.class);
+    private static Logger log = Logger.getLogger(StudentClient.class);
     private static StudentClient employeeClient = new StudentClient();
     private StudentClient(){
 
     }
     public static StudentClient getInstance(){
+        log.info("Instance StudentClient");
         return employeeClient;
     }
 
@@ -28,7 +28,7 @@ public class StudentClient {
         if(studentService != null){
             studentList = studentService.getStudentList();
         }else {
-           // log.error("personService is null");
+            log.error("personService is null");
         }
 
         return studentList;
