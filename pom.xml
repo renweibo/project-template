@@ -16,7 +16,6 @@
     <url>http://www.digiwes.com</url>
 
     <properties>
-        <party.manager.version>0.1-SNAPSHOT</party.manager.version>
         <carbon.p2.plugin.version>1.5.4</carbon.p2.plugin.version>
         <orbit.version.axis2>1.6.1.wso2v12</orbit.version.axis2>
         <axis2.client.osgi.version>1.6.1.wso2v12</axis2.client.osgi.version>
@@ -52,69 +51,69 @@
             <dependency>
                 <groupId>com.digiwes</groupId>
                 <artifactId>com.digiwes.demo.mgt.ui</artifactId>
-                <version>${party.manager.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.digiwes</groupId>
                 <artifactId>com.digiwes.demo.mgt</artifactId>
-                <version>${party.manager.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.digiwes</groupId>
                 <artifactId>com.digiwes.demo.mgt.server.feature</artifactId>
-                <version>${party.manager.version}</version>
+                <version>${project.version}</version>
                 <type>zip</type>
             </dependency>
             <dependency>
                 <groupId>com.digiwes</groupId>
                 <artifactId>com.digiwes.demo.mgt.ui.feature</artifactId>
-                <version>${party.manager.version}</version>
+                <version>${project.version}</version>
                 <type>zip</type>
             </dependency>
 
             <dependency>
                 <groupId>com.digiwes</groupId>
                 <artifactId>com.digiwes.demo.ds.mgt.ui</artifactId>
-                <version>${party.manager.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.digiwes</groupId>
                 <artifactId>com.digiwes.demo.ds.mgt</artifactId>
-                <version>${party.manager.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.digiwes</groupId>
                 <artifactId>com.digiwes.demo.ds.mgt.server.feature</artifactId>
-                <version>${party.manager.version}</version>
+                <version>${project.version}</version>
                 <type>zip</type>
             </dependency>
             <dependency>
                 <groupId>com.digiwes</groupId>
                 <artifactId>com.digiwes.demo.ds.mgt.ui.feature</artifactId>
-                <version>${party.manager.version}</version>
+                <version>${project.version}</version>
                 <type>zip</type>
             </dependency>
 
             <dependency>
                 <groupId>com.digiwes</groupId>
                 <artifactId>com.digiwes.demo.ds.ann.mgt.ui</artifactId>
-                <version>${party.manager.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.digiwes</groupId>
                 <artifactId>com.digiwes.demo.ds.ann.mgt</artifactId>
-                <version>${party.manager.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.digiwes</groupId>
                 <artifactId>com.digiwes.demo.ds.ann.mgt.server.feature</artifactId>
-                <version>${party.manager.version}</version>
+                <version>${project.version}</version>
                 <type>zip</type>
             </dependency>
             <dependency>
                 <groupId>com.digiwes</groupId>
                 <artifactId>com.digiwes.demo.ds.ann.mgt.ui.feature</artifactId>
-                <version>${party.manager.version}</version>
+                <version>${project.version}</version>
                 <type>zip</type>
             </dependency>
         </dependencies>
