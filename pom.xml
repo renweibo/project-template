@@ -9,7 +9,7 @@
 
     <groupId>com.digiwes</groupId>
     <artifactId>demo-manager</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
     <packaging>pom</packaging>
     <name>Digiwes - Demo Manager</name>
     <description>Demo Manager</description>
@@ -125,5 +125,32 @@
         <module>repository</module>
         <!--<module>service-stubs</module>-->
     </modules>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+                <version>1.0-m5.1</version>
+                <configuration>
+                    <flowInitContext>
+                        <masterBranchName>master</masterBranchName>
+                        <developBranchName>develop</developBranchName>
+                        <featureBranchPrefix>feature/</featureBranchPrefix>
+                        <releaseBranchPrefix>release/</releaseBranchPrefix>
+                        <hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
+                        <versionTagPrefix />
+                    </flowInitContext>
+                    <useReleaseProfile>false</useReleaseProfile>
+                </configuration>
+            </plugin>
+        </plugins>
+        <finalName>testFirstMaven</finalName>
+    </build>
+    <distributionManagement>
+        <repository>
+            <id>snapshots</id>
+            <name>Digiwes Nexus</name>
+            <url>http://10.1.203.161:8081/content/repositories/active-baas</url>
+        </repository>
+    </distributionManagement>
 </project>
