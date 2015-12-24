@@ -18,16 +18,7 @@
             <artifactId>org.osgi</artifactId>
             <version>3.0.0</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.service.component</artifactId>
-            <version>1.3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>org.apache.commons.logging</artifactId>
-            <version>1.0.4.v200706111724</version>
-        </dependency>-->
+
     </dependencies>
 
     <build>
