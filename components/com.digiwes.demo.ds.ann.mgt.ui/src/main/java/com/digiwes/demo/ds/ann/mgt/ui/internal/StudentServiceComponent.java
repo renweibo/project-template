@@ -2,8 +2,10 @@ package com.digiwes.demo.ds.ann.mgt.ui.internal;
 
 
 import com.digiwes.demo.ds.ann.mgt.service.IStudentService;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.osgi.service.component.ComponentContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -13,7 +15,7 @@ import org.osgi.service.component.ComponentContext;
  *                policy="dynamic" bind="setStudentService" unbind="unsetStudentService"
  */
 public class StudentServiceComponent {
-    private static Logger log = Logger.getLogger(StudentServiceComponent.class);
+    private static Logger log = LoggerFactory.getLogger(StudentServiceComponent.class);
     private static IStudentService studentService;
 
     protected void activate(ComponentContext ctxt) {
