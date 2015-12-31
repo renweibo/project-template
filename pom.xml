@@ -22,8 +22,11 @@
         <orbit.version.axiom>1.2.11.wso2v6</orbit.version.axiom>
         <orbit.version.wsdl4j>1.6.2.wso2v4</orbit.version.wsdl4j>
         <wso2carbon.version>4.2.0</wso2carbon.version>
-        <maven.scr.plugin.version>1.7.4</maven.scr.plugin.version>
+        <maven.scr.plugin.version>1.21.0</maven.scr.plugin.version>
         <maven.bundle.plugin.version>3.0.1</maven.bundle.plugin.version>
+        <org.osgi.version>3.0.0</org.osgi.version>
+        <osgi.services.vsersion>3.3.100.v20130513-1956</osgi.services.vsersion>
+        <scr.annotations.version>1.9.12</scr.annotations.version>
     </properties>
 
     <dependencyManagement>
