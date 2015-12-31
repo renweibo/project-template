@@ -3,7 +3,7 @@
     <parent>
         <artifactId>demo-manager-components</artifactId>
         <groupId>com.digiwes</groupId>
-        <version>0.3</version>
+        <version>0.4</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -11,7 +11,13 @@
     <packaging>bundle</packaging>
     <name>Digiwes - Demo DS Annotation Manager Server Component</name>
     <url>http://digiwes.com</url>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.scr.annotations</artifactId>
+            <version>${scr.annotations.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -29,6 +35,7 @@
                         <Private-Package>com.digiwes.demo.ds.ann.mgt.service</Private-Package>
                         <Export-Package>com.digiwes.demo.ds.ann.mgt.*</Export-Package>
                         <DynamicImport-Package>*</DynamicImport-Package>
+
                     </instructions>
                 </configuration>
             </plugin>
