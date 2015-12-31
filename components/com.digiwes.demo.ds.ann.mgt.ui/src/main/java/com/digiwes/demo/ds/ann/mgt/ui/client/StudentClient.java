@@ -25,7 +25,7 @@ public class StudentClient {
 
     public List<Student> getStudentList(){
         List<Student> studentList = null;
-        //获取服务
+        //Get Service
         IStudentService studentService = StudentServiceComponent.getService();
         if(studentService != null){
             studentList = studentService.getStudentList();

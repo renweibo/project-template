@@ -3,13 +3,13 @@
     <parent>
         <groupId>com.digiwes</groupId>
         <artifactId>demo-manager</artifactId>
-        <version>0.2.1</version>
+        <version>0.3</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.digiwes</groupId>
     <artifactId>demo-manager-components</artifactId>
-    <version>0.2.1</version>
+    <version>0.3</version>
 
     <packaging>pom</packaging>
     <name>Digiwes - Demo Manager Components</name>
@@ -52,6 +52,12 @@
                             </goals>
                         </execution>
                     </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-bundle-plugin</artifactId>
+                    <version>${maven.bundle.plugin.version}</version>
+                    <extensions>true</extensions>
                 </plugin>
             </plugins>
         </pluginManagement>
