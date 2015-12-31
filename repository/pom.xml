@@ -9,7 +9,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>digiwes-demo-mgt-repository</artifactId>
+    <artifactId>demo-manager-repository</artifactId>
     <packaging>pom</packaging>
     <name>Digiwes - Demo Manager Feature Repository</name>
     <url>http://digiwes.com</url>

@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
       <groupId>com.digiwes</groupId>
-      <artifactId>wes-ta-parent</artifactId>
+      <artifactId>wes-base-parent</artifactId>
       <version>0.1-SNAPSHOT</version>
     </parent>
 
@@ -23,6 +23,7 @@
         <orbit.version.wsdl4j>1.6.2.wso2v4</orbit.version.wsdl4j>
         <wso2carbon.version>4.2.0</wso2carbon.version>
         <maven.scr.plugin.version>1.7.4</maven.scr.plugin.version>
+        <maven.bundle.plugin.version>3.0.1</maven.bundle.plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -126,9 +127,14 @@
     </build>
     <distributionManagement>
         <repository>
-            <id>snapshots</id>
-            <name>Digiwes Nexus</name>
-            <url>http://10.1.203.161:8081/content/repositories/active-baas</url>
+            <id>digiwes-release</id>
+            <name>Digiwes Releases</name>
+            <url>http://10.1.203.161:8081/content/repositories/digiwes-release</url>
         </repository>
+        <snapshotRepository>
+            <id>digiwes-snapshot</id>
+            <name>Digiwes Snapshots</name>
+            <url>http://10.1.203.161:8081/content/repositories/digiwes-snapshot</url>
+        </snapshotRepository>
     </distributionManagement>
 </project>

@@ -25,7 +25,7 @@ public class EmployeeClient {
 
     public List<Employee> getEmployeeList(){
         List<Employee> employeeList = null;
-        //获取服务
+        //Get Service
        IEmployeeService employeeService = EmployeeServiceComponent.getService();
         if(employeeService != null){
             employeeList = employeeService.getEmployeeList();

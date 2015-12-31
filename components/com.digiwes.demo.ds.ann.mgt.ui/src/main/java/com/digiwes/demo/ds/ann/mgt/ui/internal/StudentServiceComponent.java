@@ -23,19 +23,19 @@ public class StudentServiceComponent {
     }
 
     /**
-     * 注册服务
+     * Regist Service
      * @param studentService
      */
-    public void setStudentService(IStudentService studentService){
+    protected void setStudentService(IStudentService studentService){
         log.info("Resgist StudentService");
         this.studentService = studentService;
     }
 
     /**
-     * 注销服务
+     * Cancel Service
      * @param studentService
      */
-    public void unsetStudentService(IStudentService studentService){
+    protected void unsetStudentService(IStudentService studentService){
         log.info("The cancellation of the IStudentService");
         if(studentService != this.studentService){
             return ;
