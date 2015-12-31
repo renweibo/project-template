@@ -3,13 +3,13 @@
     <parent>
         <groupId>com.digiwes</groupId>
         <artifactId>demo-manager</artifactId>
-        <version>0.4-SNAPSHOT</version>
+        <version>0.3</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.digiwes</groupId>
     <artifactId>demo-manager-components</artifactId>
-    <version>0.4-SNAPSHOT</version>
+    <version>0.3</version>
 
     <packaging>pom</packaging>
     <name>Digiwes - Demo Manager Components</name>
