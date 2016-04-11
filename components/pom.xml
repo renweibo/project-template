@@ -23,6 +23,8 @@
         <module>com.digiwes.demo.ds.mgt.ui</module>
         <module>com.digiwes.demo.ds.ann.mgt</module>
         <module>com.digiwes.demo.ds.ann.mgt.ui</module>
+        <module>com.digiwes.demo.ann.mgt</module>
+        <module>com.digiwes.demo.ann.mgt.test</module>
     </modules>
     <dependencies>
         <dependency>
