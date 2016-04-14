@@ -51,7 +51,7 @@ public class EDMProcessor extends AbstractProcessor {
                       out.println("public class " + newClassName + "{" );
                       out.println("        String namespace = \"" + packag + "\";");
                       out.println("        String name = \"" + name + "\";");
-                      out.println(elementMap.get(name).toString());
+                      out.println(elementMap.get(beanPath).toString());
                       out.println("}");
                       //关闭文件流
                       out.flush();
@@ -65,11 +65,19 @@ public class EDMProcessor extends AbstractProcessor {
                   String printin = "";
                   if(elementType.endsWith("EDMProperty")){
                       EDMProperty edmProperty  = el.getAnnotation(EDMProperty.class);
-                      value = edmProperty.value();
+                      try {
+                          edmProperty.value();
+                      }catch (MirroredTypeException me){
+                          value = me.getTypeMirror().toString();
+                      }
                       printin = "        Property " + simpleName + " = new Property(\""+simpleName+"\");";
                   }else if(elementType.endsWith("EDMKeyProperty")){
                       EDMKeyProperty edmKeyProperty  = el.getAnnotation(EDMKeyProperty.class);
-                      value = edmKeyProperty.value();
+                      try {
+                          edmKeyProperty.value();
+                      }catch (MirroredTypeException me){
+                          value = me.getTypeMirror().toString();
+                      }
                       printin = "        Property " + simpleName + " = new KeyProperty(\""+simpleName+"\");";
                   }
                   if(null != elementMap.get(value)) {
