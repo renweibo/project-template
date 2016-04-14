@@ -9,15 +9,15 @@ import com.digiwes.demo.ann.mgt.edmann.EDMProperty;
  */
 @EDMEntityType
 public class Person {
-    @EDMKeyProperty("Person")
+    @EDMKeyProperty(Person.class)
     private String id;
-    @EDMProperty("Person")
+    @EDMProperty(Person.class)
     private String name;
 
-    @EDMProperty("Person")
+    @EDMProperty(Person.class)
     private int age;
 
-    @EDMProperty("Person")
+    @EDMProperty(Person.class)
     private String option;
     public String getId() {
         return id;
